@@ -86,4 +86,20 @@ public interface ChatflowStreamCallback extends ChatStreamCallback {
      */
     default void onLoopCompleted(LoopCompletedEvent event) {
     }
+
+    /**
+     * 并行分支开始事件
+     *
+     * @param event 事件数据
+     */
+    default void onParallelBranchStarted(ParallelBranchStartedEvent event) {
+    }
+
+    /**
+     * 并行分支完成事件
+     *
+     * @param event 事件数据
+     */
+    default void onParallelBranchFinished(ParallelBranchFinishedEvent event) {
+    }
 }

@@ -41,7 +41,11 @@ public enum EventType {
     LOOP_COMPLETED("loop_completed"),  // 循环执行完成
 
     // Workflow 中间节点解析
-    WORKFLOW_TEXT_CHUNK("text_chunk") // workflow llm模型输入结果
+    WORKFLOW_TEXT_CHUNK("text_chunk"), // workflow llm模型输入结果
+
+    // 并行分支相关事件
+    PARALLEL_BRANCH_STARTED("parallel_branch_started"), // 并行分支开始执行
+    PARALLEL_BRANCH_FINISHED("parallel_branch_finished"), // 并行分支执行结束
 
     ;
 

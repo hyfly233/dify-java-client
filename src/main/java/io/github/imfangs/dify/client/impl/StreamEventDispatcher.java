@@ -104,6 +104,14 @@ public class StreamEventDispatcher {
                     LoopCompletedEvent loopCompletedEvent = JsonUtils.fromJson(data, LoopCompletedEvent.class);
                     callback.onLoopCompleted(loopCompletedEvent);
                     break;
+                case PARALLEL_BRANCH_STARTED:
+                    ParallelBranchStartedEvent parallelBranchStartedEvent = JsonUtils.fromJson(data, ParallelBranchStartedEvent.class);
+                    callback.onParallelBranchStarted(parallelBranchStartedEvent);
+                    break;
+                case PARALLEL_BRANCH_FINISHED:
+                    ParallelBranchFinishedEvent parallelBranchFinishedEvent = JsonUtils.fromJson(data, ParallelBranchFinishedEvent.class);
+                    callback.onParallelBranchFinished(parallelBranchFinishedEvent);
+                    break;
                 case AGENT_LOG:
                     AgentLogEvent agentLogEvent = JsonUtils.fromJson(data, AgentLogEvent.class);
                     callback.onAgentLog(agentLogEvent);
